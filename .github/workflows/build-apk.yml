@@ -3,7 +3,7 @@ name: Build LifePulse APK
 on:
   push:
     branches: [ main ]
-  workflow_dispatch:  # lets you trigger manually from GitHub
+  workflow_dispatch:
 
 jobs:
   build-apk:
@@ -33,9 +33,6 @@ jobs:
 
       - name: Build React app
         run: npm run build
-
-      - name: Install Capacitor CLI
-        run: npm install -g @capacitor/cli
 
       - name: Add Android platform
         run: npx cap add android
