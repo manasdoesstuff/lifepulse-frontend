@@ -561,7 +561,6 @@ function PostCard({post,index,C,currentUserId,onDelete,onEdit}){
             ))}
           </div>
         </div>
-        <div style={{marginTop:8,fontSize:10,color:C.inkMuted}}>🔓 Decrypted locally</div>
       </div>
     </div>
   );
