@@ -377,6 +377,7 @@ function AuthScreen({C,onAuth}){
       if(!res.ok)return setError(data.error||"Failed");
       setToken(data.accessToken);localStorage.setItem("hs_refresh",data.refreshToken);store.set("hs_user",data.user);
       onAuth(data.user);
+      requestPushPermission();
     }catch{setError("Network error — check your connection");}
     finally{setLoading(false);}
   };
