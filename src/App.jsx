@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef, useCallback } from "react";
 
 const API = "https://lifepulse-backend-production-3e50.up.railway.app/api";
-const PUSHER_KEY = "YOUR_PUSHER_KEY"; // replace after setup
+const PUSHER_KEY = "53398722f2c60ea7f459"; // replace after setup
 const PUSHER_CLUSTER = "ap2"; // replace with your cluster
 
 const themes = {
