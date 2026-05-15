@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef, useCallback } from "react";
 
 const API = "https://lifepulse-backend-production-3e50.up.railway.app/api";
-const PUSHER_KEY = "53398722f2c60ea7f459"; // replace after setup
+const PUSHER_KEY = "YOUR_PUSHER_KEY"; // replace after setup
 const PUSHER_CLUSTER = "ap2"; // replace with your cluster
 
 const themes = {
@@ -377,7 +377,6 @@ function AuthScreen({C,onAuth}){
       if(!res.ok)return setError(data.error||"Failed");
       setToken(data.accessToken);localStorage.setItem("hs_refresh",data.refreshToken);store.set("hs_user",data.user);
       onAuth(data.user);
-      requestPushPermission();
     }catch{setError("Network error — check your connection");}
     finally{setLoading(false);}
   };
@@ -1038,3 +1037,4 @@ function ProfilePage({C,user,posts,rooms,activeRoom,onLogout,onLeaveRoom,onRoomJ
     </div>
   );
 }
+
