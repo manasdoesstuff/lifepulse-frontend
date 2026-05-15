@@ -1,6 +1,6 @@
 {
-  "appId": "com.lifepulse.app",
-  "appName": "LifePulse",
+  "appId": "com.hangspace.app",
+  "appName": "HangSpace",
   "webDir": "dist",
   "server": {
     "androidScheme": "https"
